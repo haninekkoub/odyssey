@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import Member from "./components/ui/member";
 
 const config: Config = {
   content: [
@@ -19,7 +20,8 @@ const config: Config = {
         light: "#FFFFFF",
       },
       dropShadow: {
-        custom: "5px 7px 4px #EC6CF6",
+        button: "5px 7px 4px #EC6CF6",
+        member: "15px 13px 4px #2A1150",
       },
     },
   },

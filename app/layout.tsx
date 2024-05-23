@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Corner from "@/components/ui/corner";
 import Button from "@/components/ui/button";
+import Member from "@/components/ui/member";
+import Episode from "@/components/ui/episode";
 
 const karmatic = localFont({
   src: "../fonts/ka1.ttf",
@@ -27,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${eightBit.variable} ${karmatic.variable} relative py-8 min-h-screen mx-auto`}
+        className={`${eightBit.variable} ${karmatic.variable} relative py-8 min-h-screen mx-auto bg-secondary`}
       >
         {children}
         <div className="w-full h-[24.5vw] bg-dark relative">
@@ -55,6 +57,12 @@ export default function RootLayout({
         hello
         <div className="w-full h-24 flex justify-center items-center">
           <Button children="Listen Now" />
+        </div>
+        <Member image={"image"} name={"Ira Glass"} post={"Sound Manager"} />
+        <div className="flex justify-around items-end mx-10 h-96 ">
+          <Episode />
+          <Episode />
+          <Episode />
         </div>
       </body>
     </html>
